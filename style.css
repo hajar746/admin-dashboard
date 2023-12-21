@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+/* HEADER */
+.header {
+  grid-column: 2 / span 2;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: minmax(400px, 50%) minmax(300px, 30%);
+  grid-template-rows: 50px 50px;
+  row-gap: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+}
+
+#search {
+  height: 30px;
+  border: 1px solid #94a3b8;
+  border-radius: 10px;
+  background-color: aliceblue;
+  flex-grow: 1;
+  margin: 0 1rem;
+}
+
+.avatars {
+  width: 3rem;
+  height: 3rem;
+}
+
+.header-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.username {
+  display: flex;
+  gap: 1rem;
+}
+
+.username img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name > * {
+  margin: 0;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.options button {
+  background-color: #1d1e2c;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  width: min(100px, 8vw);
+  height: 40px;
+  font-weight: 600;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #1d1e2c;
+  color: white;
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100px 300px 300px;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.sidebar h1 {
+  display: inline-block;
+  grid-column: 2 /3;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.info-icons,
+.setting-icons,
+.logo {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-self: center;
+}
+
+.setting-icons {
+  padding-top: 1rem;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+/* MAIN-CONTENT */
+.main {
+  border: 2px solid orangered;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 1rem;
+}
+
+.projects {
+  grid-column: 1;
+}
+
+.projects .articles {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.announcements {
+  grid-column: 2;
+}
+
+.trending {
+  grid-column: 2;
+}
