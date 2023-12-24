@@ -7,7 +7,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-areas: "sidebar header" " sidebar main" "sidebar main";
 }
 
@@ -20,7 +20,7 @@ body {
   grid-template-rows: 50px 50px;
   row-gap: 2rem;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 2rem;
   grid-area: header;
 }
 
@@ -144,12 +144,12 @@ body {
 }
 /* MAIN-CONTENT */
 .main {
-  border: 2px solid orangered;
+  background-color: #eceef1;
   grid-column: 2;
   grid-row: 2;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1.5fr;
+  grid-template-rows: auto auto;
   padding: 1rem;
   grid-area: main;
   grid-template-areas: "project announcements" "project trending";
@@ -159,25 +159,99 @@ body {
   grid-area: project;
 }
 
+.projects h2 {
+  padding-left: 1rem;
+}
+
 .projects .articles {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .announcements {
   grid-area: announcements;
+  padding: 0 1rem;
+}
+
+.announce-blocks {
+  background-color: white;
+  padding: 0 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px #b9bfc6;
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+.announcements p {
+  margin: 0;
+}
+.announcements h4 {
+  margin: 0;
+  font-weight: 1000;
+}
+
+hr {
+  margin: 1rem 0;
 }
 
 .trending {
   grid-area: trending;
+  padding: 0 1rem;
+}
+
+.trending-blocks {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px #b9bfc6;
+  font-size: 0.8rem;
 }
 
 .t-block {
   display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.t-block .t-name {
+  font-weight: 900;
+}
+
+.t-block p {
+  margin: 0;
+}
+
+.articles {
+  padding: 0 1rem;
 }
 
 .article {
-  border: 1px solid #b9bfc6;
-  border-radius: 6px;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 2px 2px 2px #b9bfc6;
+  border-left: 6px solid #eb85b6;
+}
+
+.article h3 {
+  margin: 0;
+  font-weight: 1000;
+}
+
+.article-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.article-icons {
+  align-self: flex-end;
+}
+
+.article p {
+  margin: 0;
+  padding-top: 0.5rem;
 }
