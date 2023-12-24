@@ -97,14 +97,13 @@ body {
   grid-template-rows: auto auto;
   padding: 1rem 2.5rem;
   font-weight: 500;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
   grid-area: sidebar;
   align-content: flex-start;
 }
 
 .brand h2 {
   display: inline-block;
-  margin: 0;
 }
 
 .brand {
@@ -125,7 +124,7 @@ body {
 .sidebar-info {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1rem;
+  row-gap: 1.4rem;
 }
 
 .sidebar-icon {
@@ -148,8 +147,8 @@ body {
   grid-column: 2;
   grid-row: 2;
   display: grid;
-  grid-template-columns: 3fr 1.5fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: minmax(500px, 3fr) minmax(100px, 1.5fr);
+  grid-template-rows: repeat(auto-fit, minmax(300px, auto));
   padding: 1rem;
   grid-area: main;
   grid-template-areas: "project announcements" "project trending";
@@ -184,6 +183,7 @@ body {
 }
 .announcements p {
   margin: 0;
+  color: #515253;
 }
 .announcements h4 {
   margin: 0;
@@ -205,21 +205,27 @@ hr {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 2px 2px 2px #b9bfc6;
-  font-size: 0.8rem;
 }
 
 .t-block {
   display: flex;
   gap: 1rem;
   padding: 1rem;
+  align-items: center;
 }
 
 .t-block .t-name {
-  font-weight: 900;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .t-block p {
   margin: 0;
+}
+
+.t-block p:not(.t-name) {
+  color: #515253;
+  font-size: 1rem;
 }
 
 .articles {
@@ -254,4 +260,5 @@ hr {
 .article p {
   margin: 0;
   padding-top: 0.5rem;
+  color: #515253;
 }
